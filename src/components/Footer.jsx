@@ -54,10 +54,10 @@ function footer() {
    
   <div className="flex gap-2 breaker ">
   {/* Right side - single 50% item */}
-  <div className="breaker-child py-10 px-4  items-start justify-start flex gap-4  w-[68%]  ">
+  <div className="breaker-child  px-4  items-start justify-start flex   w-[68%]  ">
          <SlideUpText duration={0.5} delay={0.04} className=' text-white font-body text-[20px] md:text-[40px] leading-[40px] uppercase' text={'hello@domain.com'}/>  
           </div>
-            <div className="breaker-child py-10 px-4  items-start justify-end flex gap-4  w-[68%]  ">
+            <div className="breaker-child px-4  items-start justify-end flex w-[68%]  ">
          <SlideUpText duration={0.5} delay={0.04} className=' text-white font-body text-[20px] md:text-[40px] leading-[40px] uppercase' text={'+(234)9063260237'}/>  
           </div>
           
@@ -76,7 +76,7 @@ function footer() {
 
           </div>
 
-          <div className={`w-full  -4 rounded-2xl items-center justify-between flex gap-[2px] flex-col  borde border-brand-accent`}>
+          <div className={`w-full  -4 rounded-2xl items-end md:items-center justify-between flex gap-[2px] flex-col  borde border-brand-accent`}>
 
          <p  className=' text-white bebas text-para  leading-para uppercase'> Let's talk</p>
          <p  className=' text-white font-body  text-para  leading-para uppercase'> info[at]domain.com</p>
