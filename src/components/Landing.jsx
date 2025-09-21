@@ -60,11 +60,11 @@ function Landing() {
     {/* Image stack */}
     <div ref={imgRef} className="  z-[1]  relative flex[1]  flex-shrink">
       <div  className="absolute top-0 left-0 w-[80px] md:w-[130px] h-[80px] md:h-full bg-[#45775F] rounded-lg scale-95 translate-x-4 translate-y-2 shadow-md" />
-      <div className='overflow-hidden w-full h-full rounded-lg shadow-lg'>
+      <div className='overflow-hidden w-[80px] md:w-[130px] h-[80px] md:h-full rounded-lg shadow-lg'>
       <MotionImage style={{scale}}
         src={img1} // replace with your img1
         alt="Private Jet"
-        className="relative w-[80px] md:w-[130px] h-auto md:h-full  object-cover"
+        className="relative w-full h-full   object-cover"
       />
 
       </div>
