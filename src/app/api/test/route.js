@@ -2,8 +2,10 @@ import { NextResponse } from "next/server";
 import mailchimp from "@mailchimp/mailchimp_marketing";
 
   const MAILCHIMP_AUDIENCE_ID='5d6db21fd0';
+  const MAILCHIMP_API_KEY = process.env.MAILCHIMP_API_KEY;
+
 mailchimp.setConfig({
-  apiKey: 'dc693a4a3b42a50360ae8e5d556bf951-us21',
+  apiKey: MAILCHIMP_API_KEY,
   server: 'us21', // e.g. "us21"
 });
 
