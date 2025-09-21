@@ -15,8 +15,9 @@ function footer() {
     }
   ]
   return (
-    <div className='  w-full  flex gap-2 flex-col'>
-      <section className='container-section container mx-auto my-4 w-full h-full gap-6 p-2  border rounded-2xl  border-brand-accent'>
+    <div className='w-full  flex gap-2 flex-col container-section container mx-auto'>
+
+      <section className='my-4 w-full h-full gap-6 p4  border rounded-2xl  border-brand-accent'>
    <div className="flex gap-2 breaker ">
   {/* Right side - single 50% item */}
   <div className="breaker-child py-10 px-4  items-start justify-start flex flex-col gap-4  w-[60%]  ">
