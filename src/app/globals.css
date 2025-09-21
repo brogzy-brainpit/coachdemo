@@ -1,0 +1,10 @@
+/* .c-scrollbar {
+  display: none !important;
+}
+[data-scroll-container] {
+  overflow-y: auto !important; 
+} */
+/* 
+*{
+    scroll-behavior: smooth;
+} */

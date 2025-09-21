@@ -1,0 +1,52 @@
+import SlideUpText from "@/app/effects/SlideUpText";
+import { motion } from "framer-motion";
+
+function Landing() {
+  return (
+    <div className="relative flex justify-center items-center flex-col h-screen bg-brand-text-dark ">
+      <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="blur-x z-[5] absolute top-0 left-0 w-full h-full object-cover"
+          >
+            <source src="/videos/vid3.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+      
+        {/* Blurry overlay */}
+<div className="absolute top-0 left-0 w-full h-full z-[10] backdrop-blur-[20px] bg-black/30"></div>
+      <div className="card-wrapper relative z-[15]">
+        <div className="cardy relative">
+          <motion.div
+            initial={{ WebkitMaskPosition: "0% -0.2%, 120% 120%, 0 0" }}
+            animate={{ WebkitMaskPosition: "50% -0.2%, 100.14% 100%, 0 0" }}
+            transition={{ duration: 2, ease: "easeInOut" }}
+            className="
+              relative flex items-center  w-[90vw] h-[90vh]
+              bg-[url('/images/bg.png')] bg-no-repeat bg-cover
+              rounded-t-[2.5rem] rounded-bl-[2.5rem]
+              card-mask
+            "
+          >
+              <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className=" absolute top-0 left-0 w-full h-full object-cover filter grayscal group-hover:grayscal-0 transition-all duration-700 ease-in-out scale100 group-hover:scale105"
+          >
+            <source src="/videos/vid3.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+            <SlideUpText text={"heading hero is here"} delay={0.04} duration={0.50} className={'text-brand-text-dark font-custom text-heading'}/>
+           
+          </motion.div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Landing;
