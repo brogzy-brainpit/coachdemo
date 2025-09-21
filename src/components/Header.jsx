@@ -139,7 +139,7 @@ const MobileMenu=({burgerMenu, setBurgerMenu,Links})=>{
     return <motion.div variants={menuSlide} animate={burgerMenu?"enter":"exit"} initial="initial" exit="exit" className='z-40 m[10vh] fixed items-center justify-center w-[100%] top-0 left-0 h-screen bg-black'> 
 
 <div className='relative bg-[#45775F]  h-full w-full'>
-<div className='hidden md:flex cursor-pointer absolute top-0 right-10 font-custom text-[40px] bebas text-red-600' onClick={(e)=>{setBurgerMenu(false)}} >
+<div className=' md:flex cursor-pointer absolute top-0 right-10 font-custom text-[40px] bebas text-red-600' onClick={(e)=>{setBurgerMenu(false)}} >
   
 x
  
