@@ -11,24 +11,24 @@ import {base} from "../../axios";
 export const metadata = {
  
   title:{
-    default:  "curry enterprise - wedding video editing agency",
+    default:  "coach demo - life & business coaching agency",
     template:"%s - bymemet"
   },
   description: "We help wedding videographers save time and scale their business with professional, cinematic video edits delivered fast, polished, and stress-free.",
   openGraph: {
-         title: "curry enterprise - wedding video editing agency",
-  description: "We help wedding videographers save time and scale their business with professional, cinematic video edits delivered fast, polished, and stress-free."
+title: "Coach Demo – Life & Business Coaching Agency",
+description: "We help ambitious individuals and business owners unlock their potential, overcome challenges, and create lasting success through personalized life and business coaching."
 ,url:`${base}/`,
-        images: [{url:'http://res.cloudinary.com/brainpit/image/upload/v1757599932/nn3jovp2uhu45ld85rkx.png'}],
+        images: [{url:'http://res.cloudinary.com/brainpit/image/upload/v1758464858/tek2k9hdhkvwyke8mo7o.png'}],
         // images: [{url: `open-graph/?slug=${slug}`}],
         type: "website",
       },
       twitter: {
         card: "summary_large_image",
         site: "@bok_cheza",
-         title: "curry enterprise - wedding video editing agency",
-          description: "We help wedding videographers save time and scale their business with professional, cinematic video edits delivered fast, polished, and stress-free.",
-        images: [{url:'http://res.cloudinary.com/brainpit/image/upload/v1757599932/nn3jovp2uhu45ld85rkx.png',width:1200,height:630,alt:`image for curry entreprise`}],
+        title: "Coach Demo – Life & Business Coaching Agency",
+description: "We help ambitious individuals and business owners unlock their potential, overcome challenges, and create lasting success through personalized life and business coaching.",
+ images: [{url:'http://res.cloudinary.com/brainpit/image/upload/v1758464858/tek2k9hdhkvwyke8mo7o.png',width:1200,height:630,alt:`image for curry entreprise`}],
       },
 };
 
