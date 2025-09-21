@@ -45,7 +45,7 @@ function Landing() {
             muted
             loop
             playsInline
-            className="blur-x z-[5] absolute top-0 left-0 w-full h-full object-cover"
+            className="blur-x z-[5]  h-full object-cover"
           >
             <source src="/videos/hero.mp4" type="video/mp4" />
             Your browser does not support the video tag.
