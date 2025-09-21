@@ -29,9 +29,9 @@ function footer() {
             <div className="breaker-child py-10 px-4  items-start justify-end flex gap-4  w-[40%]  ">
         {/* contact form */}
            <form className=" flex flex-col justify-center items-center bg-[#2B2D33] p-4 w-full rounded-xl">
-      <div className="flex md:flex-row flex-col justify-center gap-2 w[94%] p-2 bgpink-400">
-      <input placeholder='first name' className='font-body rounded-md focusoutline-none focus:outline-double focus:outline-slate-300 focus:outline-2 capitalize text-xs inpu p-4 border-non !border-b border-b-[#5f6472] bg-[transparent] text-brand-accent' type='text'/>
-      <input placeholder='last name' className='font-body rounded-md focusoutline-none focus:outline-double focus:outline-slate-300 focus:outline-2 capitalize text-xs inpu p-4 border-non !border-b border-b-[#5f6472] bg-[transparent] text-brand-accent' type='text'/>
+      <div className="flex md:flex-row flex-col justify-between gap-2 w-full p-2 bgpink-400">
+      <input placeholder='first name' className='min-w-[50%] font-body rounded-md focusoutline-none focus:outline-double focus:outline-slate-300 focus:outline-2 capitalize text-xs input -4 border-non !border-b border-b-[#5f6472] bg-[transparent] text-brand-accent' type='text'/>
+      <input placeholder='last name' className='min-w-[50%]  font-body rounded-md focusoutline-none focus:outline-double focus:outline-slate-300 focus:outline-2 capitalize text-xs input -4 border-non !border-b border-b-[#5f6472] bg-[transparent] text-brand-accent' type='text'/>
     </div>
      <div className="flex justify-center gap-2 w-full p-2 bgpink-400">
       <input placeholder='email address' className='font-body focusoutline-none focus:outline-double focus:outline-slate-300 focus:outline-2 capitalize text-xs input w-full border-non !border-b border-b-[#5f6472] bg-[transparent] text-brand-accent' type='text'/>
@@ -54,11 +54,11 @@ function footer() {
    
   <div className="flex gap-2 breaker ">
   {/* Right side - single 50% item */}
-  <div className="breaker-child  px-4  items-start justify-start flex   w-[68%]  ">
-         <SlideUpText duration={0.5} delay={0.04} className=' text-white font-body text-[20px] md:text-[40px] leading-[40px] uppercase' text={'hello@domain.com'}/>  
+  <div className="breaker-child  px-4  items-start justify-end md:justify-start flex   w-[68%]  ">
+         <SlideUpText duration={0.5} delay={0.04} className=' text-white bebas text-[20px] md:text-[40px] leading-[40px] uppercase' text={'hello@domain.com'}/>  
           </div>
             <div className="breaker-child px-4  items-start justify-end flex w-[68%]  ">
-         <SlideUpText duration={0.5} delay={0.04} className=' text-white font-body text-[20px] md:text-[40px] leading-[40px] uppercase' text={'+(234)9063260237'}/>  
+         <SlideUpText duration={0.5} delay={0.04} className=' text-white bebas text-[20px] md:text-[40px] leading-[40px] uppercase' text={'+(234)9063260237'}/>  
           </div>
           
         
@@ -82,7 +82,7 @@ function footer() {
          <p  className=' text-white font-body  text-para  leading-para uppercase'> info[at]domain.com</p>
 
           </div>
-            <div className={`w-full  -4 rounded-2xl items-end justify-between flex gap-[2px] flex-col  borde border-brand-accent`}>
+            <div className={`w-full  -4 rounded-2xl items-end justify-between flex gap-[4px] flex-col  borde border-brand-accent`}>
          
          <p  className=' text-white bebas  text-para  leading-para uppercase'>Policies</p>
          <p  className=' text-white font-body  text-para  leading-para uppercase'>Privacy policy</p>
