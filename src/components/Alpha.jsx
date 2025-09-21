@@ -26,7 +26,7 @@ function Alpha() {
       
   <div className="flex gap-4 breaker justify-between">
   {/* Right side - single 50% item */}
-  <div className="breaker-child  px-4 rounded-2xl items-start justify-end flex gap-4 flex-col  w-[60%] ">
+  <div className="breaker-child   rounded-2xl items-start justify-end flex gap-4 flex-col  w-[60%] ">
     <p className='font-body text-xs '>Lorem, ipsum dolor.</p>
          <SlideUpText margin='-120px' duration={0.5} delay={0.04} className=' text-neutral-900 bebas text-footer leading-footer uppercase' text={'aircraft maintainance & tracking'}/>  
 
