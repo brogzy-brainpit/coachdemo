@@ -4,7 +4,7 @@ import Landing from '@/components/Landing';
 import dynamic from 'next/dynamic';
 import Lenis from './effects/Scrolls/Lenis';
 // import LocomotiveScroll from './effects/Scrolls/Locomotive';
-// import ScrollBar from  './effects/Scrolls/ScrollBar';
+import ScrollBar from  './effects/Scrolls/ScrollBar';
 // import LenisScroll from './effects/Scrolls/Lenis';
 import Zoom from '@/components/Zoom';
 import Services from '@/components/Services';
@@ -17,6 +17,9 @@ import "locomotive-scroll/dist/locomotive-scroll.css";
 import Alpha from '@/components/Alpha';
 import Trends from '@/components/Trends';
 import Footer from '@/components/Footer';
+import SmoothScrollProvider from './effects/Scrolls/UseGlobalScroll';
+import ScaleOnScroll from '@/components/Test';
+import RubberSection from '@/components/RubberSection';
 
 // const  Scene =dynamic(()=>import('@/components/3D/Scene'),{ssr:false})
 
@@ -31,8 +34,9 @@ export default function Home() {
 //   lenisOptions: {
 //     lerp: 0.08, // super floaty
 //     smoothWheel: true,
-//     wheelMultiplier: 1.2,
-//     duration:5.2,
+//     wheelMultiplier:1,
+//     duration:1.2,
+
 //     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
 
 //   },
@@ -46,16 +50,25 @@ export default function Home() {
   return (
     <main className='bg-neutral-800'>
 
-<Lenis>
+{/* <Lenis>
+</Lenis> */}
+
+
      <Header />
+     <RubberSection>
      <Landing/>
+     </RubberSection>
+     <RubberSection>
      <Services/>
-     {/* <CalModalInline/> */}
+    </RubberSection>
+     <RubberSection>
+    <ScaleOnScroll/>
+    </RubberSection>
+     <CalModalInline/>
      <Alpha/>
      <CustomerFeedBack/>
      <Trends/>
      <Footer/>
-</Lenis>
 
      {/* <Feed/> */}
 

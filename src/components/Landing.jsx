@@ -39,8 +39,8 @@ function Landing() {
 
        <ScaleUpContent margin='0px' once={false} duration='0.20' delay='0.08' className='relative overflow-hidden bgbrand-secondary rounded-2xl breaker-child w-[43%]'>
          <div className="relative  w-full h-full">
-          {/* <Image src={plane} width={400} height={400} className='object-cover w-full h-full'/> */}
-            <video
+          <Image src={plane} width={400} height={400} className='object-cover w-full h-full'/>
+            {/* <video
             autoPlay
             muted
             loop
@@ -49,7 +49,7 @@ function Landing() {
           >
             <source src="/videos/hero.mp4" type="video/mp4" />
             Your browser does not support the video tag.
-          </video>
+          </video> */}
           </div>
        </ScaleUpContent>
       </section>
