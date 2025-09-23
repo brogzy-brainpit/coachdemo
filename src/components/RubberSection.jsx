@@ -36,7 +36,7 @@ export default function RubberSection({ children,defaultY=[250, 0] }) {
   return (
     <motion.section style={{ y: y }}
       ref={ref}
-      className="h-screen w-full bg-black text-white text-6xl font-bold"
+      className="h-full w-full bg-black"
     >
       {/* 🔹 Progress bar with gradient */}
       <motion.div

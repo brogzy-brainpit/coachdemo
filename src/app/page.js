@@ -17,7 +17,6 @@ import "locomotive-scroll/dist/locomotive-scroll.css";
 import Alpha from '@/components/Alpha';
 import Trends from '@/components/Trends';
 import Footer from '@/components/Footer';
-import SmoothScrollProvider from './effects/Scrolls/UseGlobalScroll';
 import ScaleOnScroll from '@/components/Test';
 import RubberSection from '@/components/RubberSection';
 
@@ -50,12 +49,9 @@ export default function Home() {
   return (
     <main className='bg-neutral-800'>
 
-{/* <Lenis>
-</Lenis> */}
-
-
+<Lenis>
      <Header />
-     <RubberSection>
+     <RubberSection defaultY={[0,-200]}>
      <Landing/>
      </RubberSection>
      <RubberSection>
@@ -73,6 +69,7 @@ export default function Home() {
      {/* <Feed/> */}
 
      {/* <Zoom/> */}
+</Lenis>
    
      
     </main>
