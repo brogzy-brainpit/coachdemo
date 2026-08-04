@@ -2,19 +2,17 @@
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useRef } from "react";
 
-export default function RubberSection({ children,defaultY=[250, 0] }) {
+export default function RubberSection({ stiffness= 120,damping= 15,mass= 0.3,className,children,defaultY=[250, 0],defaultStart= ["0.8 end", "0.7 start"] }) {
   const ref = useRef(null);
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0.8 end", "0.7 start"],
+    offset:defaultStart,
   });
 
   // progress spring
   const scrollMarker = useSpring(scrollYProgress, {
-    stiffness: 120,
-    damping: 15,
-    mass: 0.3,
+    stiffness: 120, damping: 15, mass: 0.3 
   });
 
   // 🎨 Gradient that shifts from red → green as you scroll
@@ -29,15 +27,13 @@ export default function RubberSection({ children,defaultY=[250, 0] }) {
   const rotateRaw = useTransform(scrollYProgress, [0, 1], [-40, 0]);
 
   // smooth versions
-  const y = useSpring(yRaw, { stiffness: 120, damping: 15, mass: 0.3 });
+  const y = useSpring(yRaw, {stiffness, damping, mass });
   const scale = useSpring(scaleRaw, { stiffness: 120, damping: 15, mass: 0.3 });
   const rotate = useSpring(rotateRaw, { stiffness: 120, damping: 15, mass: 0.3 });
 
   return (
-    <motion.section style={{ y: y }}
-      ref={ref}
-      className="h-full w-full bg-black"
-    >
+    <motion.section className={`${className}  h-full w-full`} style={{ y: y }}
+      ref={ref}>
       {/* 🔹 Progress bar with gradient */}
       <motion.div
         style={{ scaleX: scrollMarker, background }}

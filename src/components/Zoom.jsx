@@ -1,12 +1,8 @@
 'use client';
 import styles from './styles.module.scss';
-import Picture5 from '../../public/images/service04.png';
-import Picture6 from '../../public/images/service04.png';
-import Picture7 from '../../public/images/service04.png';
 import Image from 'next/image';
 import { useScroll, useTransform, motion, useInView } from 'framer-motion';
 import { useEffect, useRef } from 'react';
-import { VolumeOff } from 'lucide-react';
 
 function Zoom() {
   const container = useRef(null);

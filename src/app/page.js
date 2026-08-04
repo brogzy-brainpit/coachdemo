@@ -51,24 +51,23 @@ export default function Home() {
 
 <Lenis>
      <Header />
-     <RubberSection defaultY={[0,-200]}>
+     {/* <RubberSection damping={10} stiffness={140} mass={0.7} className={'mb-[-230px]'} defaultStart={["start start", "end start"]} defaultY={[0,-580]}> */}
      <Landing/>
-     </RubberSection>
-     <RubberSection>
      <Services/>
-    </RubberSection>
-     <RubberSection>
-    <ScaleOnScroll/>
-    </RubberSection>
-     <CalModalInline/>
+     {/* <Zoom/> */}
+        <RubberSection className={'mb-[-280px]'} defaultStart={["start end", "end start"]} defaultY={[0,-580]}>
+
      <Alpha/>
      <CustomerFeedBack/>
+    {/* <ScaleOnScroll/> */}
+     <CalModalInline/>
      <Trends/>
-     <Footer/>
+    </RubberSection>
 
+     <Footer/>
      {/* <Feed/> */}
 
-     {/* <Zoom/> */}
+
 </Lenis>
    
      

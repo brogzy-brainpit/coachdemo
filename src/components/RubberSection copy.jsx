@@ -2,29 +2,49 @@
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useRef } from "react";
 
-export default function Section({ children }) {
+export default function RubberSection({ children,defaultY=[250, 0],defaultStart= ["0.8 end", "0.7 start"] }) {
   const ref = useRef(null);
+
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0.8 1", "0.2 0"],
+    offset:defaultStart,
   });
 
-  // raw transforms
-  const yRaw = useTransform(scrollYProgress, [0, 1], [50, 0]);
-  const scaleRaw = useTransform(scrollYProgress, [0, 1], [0.4, 1]);
+  // progress spring
+  const scrollMarker = useSpring(scrollYProgress, {
+    stiffness: 120,
+    damping: 15,
+    mass: 0.3,
+  });
 
-  // ✅ add damping with spring
+  // 🎨 Gradient that shifts from red → green as you scroll
+  const background = useTransform(scrollYProgress, [0, 1], [
+    "linear-gradient(to right, #ff0000, #ff0000)", // fully red at start
+    "linear-gradient(to right, #ff0000, #00ff00)", // red → green at end
+  ]);
+
+  // raw transforms
+  const yRaw = useTransform(scrollYProgress, [0, 1], defaultY);
+  const scaleRaw = useTransform(scrollYProgress, [0, 1], [0.4, 1]);
+  const rotateRaw = useTransform(scrollYProgress, [0, 1], [-40, 0]);
+
+  // smooth versions
   const y = useSpring(yRaw, { stiffness: 120, damping: 15, mass: 0.3 });
   const scale = useSpring(scaleRaw, { stiffness: 120, damping: 15, mass: 0.3 });
+  const rotate = useSpring(rotateRaw, { stiffness: 120, damping: 15, mass: 0.3 });
 
   return (
-    <motion.section
+    <motion.section style={{ y: y }}
       ref={ref}
-      style={{ y }}
-      className="h-screen flex items-center justify-center bg-black text-white text-6xl font-bold"
-    >
+      className="h-full w-full">
+      {/* 🔹 Progress bar with gradient */}
+      <motion.div
+        style={{ scaleX: scrollMarker, background }}
+        className="fixed top-0 left-0 right-0 h-1 origin-left"
+      />
+
       {children}
-      <h2 className="bebas text-white text-footer">hello world</h2>
+
     </motion.section>
   );
 }

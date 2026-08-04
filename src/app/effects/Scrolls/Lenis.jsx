@@ -1,17 +1,18 @@
 "use client";
 import React, { useEffect } from "react";
-import Lenis from "@studio-freight/lenis";
-import gsap from "gsap";
+import Lenis from "lenis";
+
 
 function SmoothScroll({ children }) {
   useEffect(() => {
     const lenis = new Lenis({
-      //  lerp: 0.08, // super floaty
+       lerp: 0.1, // super floaty
       smoothWheel: true,
-      wheelMultiplier:2,
-      duration:7,
+      // wheelMultiplier:30,
+      // duration:7,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     });
+    // const lenis = new Lenis();
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
@@ -20,7 +21,7 @@ function SmoothScroll({ children }) {
 
     return () => {
       lenis.destroy();
-      gsap.ticker.remove(() => {});
+   
     };
   }, []);
 

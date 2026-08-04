@@ -5,7 +5,7 @@ export default function FadeInText({ text, className = 'gap-[5px]' }) {
   const textRef2 = useRef(null);
   const { scrollYProgress: ss } = useScroll({
     target: textRef2,
-    offset: ['0.4 end', 'end 0.6'],
+    offset: ['0.6 end', 'end 0.8'],
   });
 
   const words = text.split(' ');
